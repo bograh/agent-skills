@@ -6,6 +6,7 @@ This repository is intended to grow over time. It currently includes:
 
 - `design-patterns-agent`: helps identify, compare, explain, and implement GoF design patterns.
 - `refactoring-agent`: helps analyze code smells and apply targeted refactorings without changing behavior.
+- `springboot-agent`: helps design and build production-grade Spring Boot services across API, data, security, messaging, caching, testing, and observability concerns.
 
 Each skill lives in its own directory and is defined by a `SKILL.md` file plus optional reference material.
 
@@ -17,6 +18,9 @@ Each skill lives in its own directory and is defined by a `SKILL.md` file plus o
 │   ├── SKILL.md
 │   └── references/
 ├── refactoring-agent/
+│   ├── SKILL.md
+│   └── references/
+├── springboot-agent/
 │   ├── SKILL.md
 │   └── references/
 └── README.md
@@ -60,6 +64,32 @@ Reference files:
 - `references/code-smells.md`
 - `references/techniques.md`
 
+### `springboot-agent`
+
+Focused on production-grade Spring Boot engineering across the full backend stack.
+
+Use it when you need to:
+
+- scaffold a new Spring Boot service with a sane package structure
+- build REST or GraphQL APIs
+- wire Spring Data, JPA, Flyway, or transactional service layers
+- configure Spring Security, OAuth2, or JWT-based auth
+- add Spring Cloud components for microservices
+- integrate Kafka, RabbitMQ, Redis, or Caffeine
+- add testing, observability, and operational defaults for production
+
+Reference files:
+
+- `references/project-structure.md`
+- `references/data.md`
+- `references/security.md`
+- `references/rest-graphql.md`
+- `references/cloud-microservices.md`
+- `references/messaging.md`
+- `references/caching.md`
+- `references/observability.md`
+- `references/testing.md`
+
 ## How These Skills Are Meant To Be Used
 
 These skills are designed for Codex-style skill loading:
@@ -85,6 +115,7 @@ Example:
 mkdir -p "$CODEX_HOME/skills"
 ln -s "/path/to/agent-skills/design-patterns-agent" "$CODEX_HOME/skills/design-patterns-agent"
 ln -s "/path/to/agent-skills/refactoring-agent" "$CODEX_HOME/skills/refactoring-agent"
+ln -s "/path/to/agent-skills/springboot-agent" "$CODEX_HOME/skills/springboot-agent"
 ```
 
 If your environment uses a different skills path, adapt the target directory accordingly.
